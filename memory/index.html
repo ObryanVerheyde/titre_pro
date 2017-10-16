@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8">
+    
+    <title>Memory game</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/media_queries.css">
+  </head>
+
+  <body>
+    <div class="back">
+      <button type="button" name="back" class="back">
+        <a href="index.html">
+          <i class="fa fa-chevron-circle-left" style="color: #ffffff"></i>
+        </a>
+      </button>
+    </div>
+
+    <div class="game" id="game">
+      <div class="card" data-index="0" data-active="false"></div>
+      <div class="card" data-index="0" data-active="false"></div>
+      <div class="card" data-index="1" data-active="false"></div>
+      <div class="card" data-index="1" data-active="false"></div>
+      <div class="card" data-index="2" data-active="false"></div>
+      <div class="card" data-index="2" data-active="false"></div>
+      <div class="card" data-index="3" data-active="false"></div>
+      <div class="card" data-index="3" data-active="false"></div>
+      <div class="card" data-index="4" data-active="false"></div>
+      <div class="card" data-index="4" data-active="false"></div>
+      <div class="card" data-index="5" data-active="false"></div>
+      <div class="card" data-index="5" data-active="false"></div>
+    </div>
+
+    <div class="footer">
+      <p class="timer" id="timer">
+        00:00
+      </p>
+      <p class="actions" id="actions">
+        0 move
+      </p>
+    </div>
+
+    <div class="resultsContainer" id="results">
+      <p>
+        Félicitations
+      </p>
+      <p>
+        Veuillez indiquer votre adresse email pour bénéficier de 10% de remise
+      </p>
+      <p>
+        <input type="email" name="email" value="">
+        <button type="submit" name="submit" class="submit">Submit</button>
+      </p>
+      <button class="resetButton">Recommencer</button>
+    </div>
+
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/gsap/1.19.0/TweenMax.min.js'></script>
+    <script src="js/index.js"></script>
+  </body>
+</html>

@@ -1,0 +1,12 @@
+/* Surface Pro 3 Landscape */
+@media only screen
+and (width : 1440px)
+and (height : 960px)
+and (device-aspect-ratio: 3/2)
+{
+  .card
+  {
+    width: 200px;
+    height: 165px;
+  }
+}

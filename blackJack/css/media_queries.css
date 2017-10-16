@@ -1,0 +1,12 @@
+/* Surface Pro 3 Landscape */
+@media only screen
+and (width : 1440px)
+and (height : 960px)
+and (device-aspect-ratio: 3/2)
+{
+  .dealer-cards
+  {
+    background: blue;
+    float: left;
+  }
+}

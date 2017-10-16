@@ -1,0 +1,239 @@
+body
+{
+  width: 100vw;
+  height: 100vh;
+  margin: 0;
+  padding: 0;
+  position: relative;
+  overflow: hidden;
+  left: 5px;
+}
+
+.back
+{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  position: relative;
+  top: 4%;
+  left: 2%;
+  width: 50px;
+  height: 45px;
+  font-size: 25px;
+}
+
+button.back
+{
+  width: 50px;
+  height: 45px;
+  border-radius: 15px;
+}
+
+button.submit
+{
+  width: 60px;
+  height: 25px;
+}
+
+.game
+{
+  width: 70%;
+  height: 690px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  -ms-flex-line-pack: justify;
+  align-content: space-between;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+
+.card
+{
+  background: repeating-linear-gradient(45deg, #DDBF86, #DDBF86 10px, #EDD2A4 10px, #EDD2A4 20px);
+  border-radius: 5px;
+  width: 240px;
+  height: 165px;
+  margin: 20px;
+  position: relative;
+  overflow: hidden;
+  -webkit-transition: -webkit-transform 0.2s cubic-bezier(0.455, 0.03, 0.515, 0.955);
+  transition: -webkit-transform 0.2s cubic-bezier(0.455, 0.03, 0.515, 0.955);
+  transition: transform 0.2s cubic-bezier(0.455, 0.03, 0.515, 0.955);
+  transition: transform 0.2s cubic-bezier(0.455, 0.03, 0.515, 0.955), -webkit-transform 0.2s cubic-bezier(0.455, 0.03, 0.515, 0.955);
+}
+
+.card:after
+{
+  content: '';
+  width: 100%;
+  height: 100%;
+  background: #1970c4;
+  background-position: center center;
+  background-repeat: no-repeat;
+  visibility: hidden;
+  opacity: 0;
+  position: absolute;
+  top: 0;
+  left: 0;
+  -webkit-transition: visibility 0s, opacity 0s linear 0.1s;
+  transition: visibility 0s, opacity 0s linear 0.1s;
+  -webkit-transition-delay: 0.1s;
+  transition-delay: 0.1s;
+}
+
+.card[data-index='0']:after
+{
+  background-image: url("../img/000008-mille-feuilles-fraises-small.jpg");
+  background-size: 240px;
+}
+
+.card[data-index='1']:after
+{
+  background-image: url("../img/000014-gateaux-choco-small.jpg");
+  background-size: 240px;
+}
+
+.card[data-index='2']:after
+{
+  background-image: url("../img/000152-eclair-chocolat-small.jpg");
+  background-size: 250px;
+}
+
+.card[data-index='3']:after
+{
+  background-image: url("../img/000035-sucettes-chocolat-pop-small.jpg");
+  background-size: 250px;
+}
+
+.card[data-index='4']:after
+{
+  background-image: url("../img/000036-truffes-chocolat-small.jpg");
+  background-size: 250px;
+}
+
+.card[data-index='5']:after
+{
+  background-image: url("../img/000030-cupcakes-framboises-small.jpg");
+  background-size: 265px;
+}
+
+.card[data-active='true']
+{
+  -webkit-transform: rotate3D(0, 1, 0, 180deg);
+  transform: rotate3D(0, 1, 0, 180deg);
+}
+
+.card[data-active='true']:hover
+{
+  -webkit-transform: rotate3D(0, 1, 0, 180deg) scale(1.2);
+  transform: rotate3D(0, 1, 0, 180deg) scale(1.2);
+}
+
+.card[data-active='true']:after
+{
+  visibility: visible;
+  opacity: 1;
+}
+
+.card:hover
+{
+  -webkit-transform: scale(1.2);
+  transform: scale(1.2);
+}
+
+.resetButton, body .actions, body .timer
+{
+  font-size: 10px;
+  text-transform: uppercase;
+  color: #ecf0f1;
+  background: none;
+  border: none;
+  outline: none;
+  margin: 0;
+  padding: 0;
+  cursor: pointer;
+  position: absolute;
+  bottom: 10px;
+  left: 10px;
+}
+
+.actions
+{
+  font-size: 15px;
+  font-weight: bold;
+  color: #000000;
+  left: 2%;
+  -webkit-transform: translateX(-50%);
+  transform: translateX(-50%);
+}
+
+.timer
+{
+  font-size: 15px;
+  font-weight: bold;
+  color: #000000;
+  left: unset;
+  right: 2%;
+}
+
+.resultsContainer
+{
+  font-size: 12px;
+  text-align: center;
+  text-transform: uppercase;
+  color: #292929;
+  background: #ecf0f1;
+  padding: 30px 0;
+  border-radius: 5px;
+  box-sizing: border-box;
+  width: 300px;
+  height: 200px;
+  visibility: hidden;
+  opacity: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -45%);
+  transform: translate(-50%, -45%);
+  -webkit-transition: visibility 0s linear 0.5s, opacity 0.2s cubic-bezier(0.455, 0.03, 0.515, 0.955), -webkit-transform 0.2s cubic-bezier(0.455, 0.03, 0.515, 0.955);
+  transition: visibility 0s linear 0.5s, opacity 0.2s cubic-bezier(0.455, 0.03, 0.515, 0.955), -webkit-transform 0.2s cubic-bezier(0.455, 0.03, 0.515, 0.955);
+  transition: transform 0.2s cubic-bezier(0.455, 0.03, 0.515, 0.955), visibility 0s linear 0.5s, opacity 0.2s cubic-bezier(0.455, 0.03, 0.515, 0.955);
+  transition: transform 0.2s cubic-bezier(0.455, 0.03, 0.515, 0.955), visibility 0s linear 0.5s, opacity 0.2s cubic-bezier(0.455, 0.03, 0.515, 0.955), -webkit-transform 0.2s cubic-bezier(0.455, 0.03, 0.515, 0.955);
+}
+
+.resultsContainer.show
+{
+  visibility: visible;
+  opacity: 1;
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  -webkit-transition-delay: 0s;
+  transition-delay: 0s;
+}
+
+.resultsContainer .actions, .resultsContainer .timer
+{
+  font-size: 12px;
+  color: #292929;
+  position: static;
+}
+
+.resultsContainer .resetButton
+{
+  color: #292929;
+  padding: 20px 0;
+  position: static;
+}
